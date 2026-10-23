@@ -1,5 +1,5 @@
-name=No Crack Nag
-id=NoCrackNag
+name=RepairWallCracksExtended Fix
+id=RepairWallCracksExtendedFix
 description=Silences the "I need some plaster..." / "I need a plaster trowel..." green floating text that RepairWallCracksExtended shows whenever you are near a wall crack without the materials. The repair feature itself is untouched - you still get the repair option when you have plaster and a trowel. Load alongside RepairWallCracksExtended.
 poster=poster.png
 icon=icon.png

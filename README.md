@@ -1,4 +1,4 @@
-# No Crack Nag
+# RepairWallCracksExtended Fix
 
 A tiny Project Zomboid **Build 42** companion mod for
 [RepairWallCracksExtended](https://steamcommunity.com/sharedfiles/filedetails/?id=2964212585)
@@ -32,9 +32,9 @@ registration, so it survives that mod's updates.
 ## Layout
 
 ```
-Contents/mods/NoCrackNag/42/
+Contents/mods/RepairWallCracksExtendedFix/42/
   mod.info
-  media/lua/client/NoCrackNag/NoCrackNag_Client.lua
+  media/lua/client/RepairWallCracksExtendedFix/RepairWallCracksExtendedFix_Client.lua
 ```
 
 B42 requires the `42/` subfolder. See `workshop-meta/UPLOAD.md` for publishing.

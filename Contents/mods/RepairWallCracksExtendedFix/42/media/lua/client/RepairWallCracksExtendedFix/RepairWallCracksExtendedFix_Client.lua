@@ -1,4 +1,5 @@
--- NoCrackNag — silence RepairWallCracksExtended's "I need..." halo nag.
+-- RepairWallCracksExtendedFix — silence RepairWallCracksExtended's "I need..."
+-- halo nag.
 --
 -- RepairWallCracksExtended (Workshop 2964212585) builds its right-click repair
 -- option in an OnFillWorldObjectContextMenu handler. When you're near a wall
@@ -31,21 +32,21 @@ local function installHaloFilter()
     local index = mt and mt.__index
     if type(index) ~= "table" then return false end
 
-    if index.__NoCrackNag_installed then return true end
+    if index.__RWCEFix_installed then return true end
 
     local original = index.setHaloNote
     if type(original) ~= "function" then return false end
 
-    index.__NoCrackNag_original = original
+    index.__RWCEFix_original = original
     index.setHaloNote = function(self, text, ...)
         if type(text) == "string" and NAG_MESSAGES[text] then
             return -- swallow the crack-repair nag; add no halo note
         end
         return original(self, text, ...)
     end
-    index.__NoCrackNag_installed = true
+    index.__RWCEFix_installed = true
 
-    print("[NoCrackNag] halo-note filter installed; crack nag suppressed.")
+    print("[RepairWallCracksExtendedFix] halo-note filter installed; crack nag suppressed.")
     return true
 end
 
@@ -62,7 +63,7 @@ pollFn = function()
     ticks = ticks + 1
     if ticks >= MAX_TICKS then
         Events.OnTick.Remove(pollFn)
-        print("[NoCrackNag] gave up after " .. tostring(MAX_TICKS)
+        print("[RepairWallCracksExtendedFix] gave up after " .. tostring(MAX_TICKS)
             .. " ticks; player/metatable never became available.")
     end
 end
@@ -78,4 +79,4 @@ end
 Events.OnGameStart.Add(arm)
 Events.OnCreatePlayer.Add(arm)
 
-print("[NoCrackNag] client loaded; waiting for player to install halo filter.")
+print("[RepairWallCracksExtendedFix] client loaded; waiting for player to install halo filter.")

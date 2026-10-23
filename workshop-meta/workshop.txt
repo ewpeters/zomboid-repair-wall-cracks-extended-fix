@@ -1,6 +1,6 @@
 version=1
 id=
-title=No Crack Nag
+title=RepairWallCracksExtended Fix
 description=Silences the annoying green floating text that RepairWallCracksExtended shows above your character whenever you are near a wall crack without the materials ("I need some plaster..." / "I need a plaster trowel...").
 description=
 description=The repair feature is completely untouched: when you do have a full plaster bucket and a plaster trowel, you still get the normal right-click "Repair Wall Crack" option. This mod only removes the nag when you are missing materials.
