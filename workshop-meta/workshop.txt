@@ -9,4 +9,5 @@ description=How it works: a tiny client-side Lua filter swallows those two exact
 description=
 description=REQUIRED: RepairWallCracksExtended (Workshop id 2964212585). Subscribe to it and load it FIRST - this mod declares it as a hard dependency and is set to load after it. Build 42 only. Pure Lua, no Java patches.
 tags=Build 42
+preview=preview.png
 visibility=public
